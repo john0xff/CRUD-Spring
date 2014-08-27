@@ -6,45 +6,49 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/res/main.css" />
+
 <title>Edit</title>
 </head>
 <body>
-	<h1>Edit</h1>
-	<p>Here you can get details about employee</p>
+	<fieldset id="container" style="margin-top: 50px;">
 	
-	<form:form commandName="employee">
-		<table>
-			<tbody>
-				<tr>
-					<td>Last Name:</td>
-					<td><form:input path="lastName" readonly="true" /></td>
-				</tr>
-				<tr>
-					<td>First Name:</td>
-					<td><form:input path="firstName" readonly="true" /></td>
-				</tr>
-				<tr>
-					<td>Position:</td>
-					<td><form:input path="position" readonly="true" /></td>
-				</tr>
-				<tr>
-					<td>Office:</td>
-					<td><form:input path="office" readonly="true" /></td>
-				</tr>
-				<tr>
-					<td>Start Date:</td>
-					<td><form:input path="startDate" readonly="true" /></td>
-				</tr>
-				<tr>
-					<td>Salary:</td>
-					<td><form:input path="salary" readonly="true" /></td>
-				</tr>
-			</tbody>
-		</table>
-	</form:form>
-
-	<a href="${pageContext.request.contextPath}/employee/list">Back</a> <br />
-	<a href="${pageContext.request.contextPath}/home">Home page</a>
+		<legend id="legend">
+			<b>Employee details</b>
+		</legend>
 	
+		<form:form class="account-form" commandName="employee">
+			
+			<div class="account-info">
+				<label> Last Name: </label>
+				<form:input path="lastName" class="input-fields" readonly="true" />
+				
+				<label> First Name: </label>
+				<form:input path="firstName" class="input-fields" readonly="true" />
+				
+				<label> Position: </label>
+				<form:input path="position" class="input-fields" readonly="true" />
+				
+				<label> Office: </label>
+				<form:input path="office" class="input-fields" readonly="true" />
+				
+				<label> Start Date: </label>
+				<form:input path="startDate" class="input-fields" readonly="true" />
+				
+				<label> Salary: </label>
+				<form:input path="salary" class="input-fields" readonly="true" />
+			</div>
+			
+			<div class="account-login-btn">
+				<input class="blue-style-btn" type="button" value="Back" 
+				onclick="location.replace('${pageContext.request.contextPath}/employee/list')" />
+				
+				<input class="blue-style-btn" type="button" value="Home page"
+				onclick="location.replace('${pageContext.request.contextPath}/home')" />
+			</div>
+			
+		</form:form>
+	</fieldset>
 </body>
 </html>

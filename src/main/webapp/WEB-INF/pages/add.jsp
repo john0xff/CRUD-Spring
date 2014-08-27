@@ -5,48 +5,49 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/res/main.css" />
+
 <title>Add</title>
 </head>
 <body>
-
-	<h1>Add new employee</h1>
-
-	<form:form method="POST" commandName="employeeModel" action="${pageContext.request.contextPath}/employee/add">
-		<table>
-			<tbody>
-				<tr>
-					<td>Last Name:</td>
-					<td><form:input path="lastName" /></td>
-				</tr>
-				<tr>
-					<td>First Name:</td>
-					<td><form:input path="firstName" /></td>
-				</tr>
-				<tr>
-					<td>Position:</td>
-					<td><form:input path="position" /></td>
-				</tr>
-				<tr>
-					<td>Office:</td>
-					<td><form:input path="office" /></td>
-				</tr>
-				<tr>
-					<td>Start Date:</td>
-					<td><form:input path="startDate" /></td>
-				</tr>
-				<tr>
-					<td>Salary:</td>
-					<td><form:input path="salary" /></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="Add" /></td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
-	</form:form>
-
-	<a href="${pageContext.request.contextPath}/home">Home page</a>
-
+	<fieldset id="container" style="margin-top: 50px;">
+	
+		<legend id="legend">
+			<b>Add new employee</b>
+		</legend>	
+	
+		<form:form class="account-form" method="POST" commandName="employeeModel" action="${pageContext.request.contextPath}/employee/add">
+			
+			<div class="account-info">
+				<label> Last Name: </label>
+				<form:input path="lastName" class="input-fields" autofocus="autofocus" />
+				
+				<label> First Name: </label>
+				<form:input path="firstName" class="input-fields" />
+				
+				<label> Position: </label>
+				<form:input path="position" class="input-fields" />
+				
+				<label> Office: </label>
+				<form:input path="office" class="input-fields" />
+				
+				<label> Start Date: </label>
+				<form:input path="startDate" class="input-fields" />
+				
+				<label> Salary: </label>
+				<form:input path="salary" class="input-fields" />
+			</div>
+			
+			<div class="account-login-btn">
+				<input class="blue-style-btn" type="submit" value="Add" />
+				
+				<input class="blue-style-btn" type="button" value="Home page"
+				onclick="location.replace('${pageContext.request.contextPath}/home')" />
+			</div>
+			
+		</form:form>
+		
+	</fieldset>
 </body>
 </html>

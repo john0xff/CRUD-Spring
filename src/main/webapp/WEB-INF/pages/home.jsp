@@ -5,32 +5,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
 
-<style type="text/css">
-	.msg {
-		padding: 15px;
-		margin-bottom: 0px;
-		margin-left: 20px;
-		margin-right: 20px;
-		border: 1px solid transparent;
-		border-radius: 6px;
-		color: #000000;
-		background-color: #d9edf7;
-		border-color: #0080ff;
-	}
-</style>
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/res/main.css" />
+
+<title>Home</title>
 
 </head>
 <body>
-	<h1>Home page</h1>
-	
-	<c:if test="${not empty message}">
-		<div class="msg">${message}</div>
-	</c:if>
-	
-	<a href="${pageContext.request.contextPath}/employee/add">Add new employee</a> <br/>
-	<a href="${pageContext.request.contextPath}/employee/list">Show employees list</a> <br/>
-	
+	<fieldset id="container">
+		
+		<legend id="legend">
+			<b>Home page</b>
+		</legend>
+		
+		<c:if test="${not empty message}">
+			<div class="msg">${message}</div>
+		</c:if>
+		
+		<input class="blue-style-btn" type="button" value="Add new employee" 
+		onclick="location.replace('${pageContext.request.contextPath}/employee/add')" />
+		
+		<input class="blue-style-btn" type="button" value="Show employees list" 
+		onclick="location.replace('${pageContext.request.contextPath}/employee/list')" />
+		
+	</fieldset>
 </body>
 </html>
