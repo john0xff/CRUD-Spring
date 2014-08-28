@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/res/main.css" >
 
-<title>Edit</title>
+<title>Update</title>
 </head>
 <body>
 	<fieldset id="container" style="margin-top: 50px;">

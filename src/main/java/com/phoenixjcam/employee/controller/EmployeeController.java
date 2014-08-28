@@ -86,7 +86,7 @@ public class EmployeeController
 		// employeeModel.setStartDate(new Date());
 
 		employeeService.updateEmployee(employeeModel);
-		String message = "Employee successfully edited.";
+		String message = "Employee successfully updated.";
 		modelAndView.addObject("message", message);
 
 		return modelAndView;
